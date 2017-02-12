@@ -9,14 +9,16 @@ gulp.task('clean:css', function () {
   ]);
 });
 
+var cssSource = ['src/style/*.less', 'public/components/normalize-css/normalize.css'];
+
 gulp.task('css-compile', ['clean:css'], function(){
-  return gulp.src('src/style/*.less')
+  return gulp.src(cssSource)
     .pipe(less())
     .pipe(gulp.dest('public/css'))
 });
 
 gulp.task('css-package', ['clean:css'], function(){
-  return gulp.src('src/style/*.less')
+  return gulp.src(cssSource)
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest('public/css'))
