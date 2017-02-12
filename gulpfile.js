@@ -1,15 +1,22 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-csso');
+var del = require('del');
 
-gulp.task('css-compile', function(){
+gulp.task('clean:css', function () {
+  return del([
+    'public/css/*'
+  ]);
+});
+
+gulp.task('css-compile', ['clean:css'], function(){
   return gulp.src('src/style/*.less')
     .pipe(less())
     .pipe(gulp.dest('public/css'))
 });
 
-gulp.task('css-package', function(){
-  return gulp.src('public/css/*.css')
+gulp.task('css-package', ['clean:css'], function(){
+  return gulp.src('src/style/*.less')
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest('public/css'))
