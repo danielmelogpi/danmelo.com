@@ -2,9 +2,28 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/components/normalize-css/normalize.css' />
+    <link rel='stylesheet' href='/css/default.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    {{{body}}}
+    
+    
+    <nav class="main">
+      <ul>
+        <li>lang</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+      </ul>
+    </nav>
+    <section class="banner">
+      <div class="img-container"></div>
+    </section>
+    <section class="main">
+        {{{body}}}
+    </section>
+    
+
   </body>
+  <script src="/components/vue/dist/vue.min.js"></script>
 </html>
