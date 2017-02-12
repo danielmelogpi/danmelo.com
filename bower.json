@@ -1,0 +1,18 @@
+{
+  "name": "danmelo.com",
+  "description": "A personal website",
+  "main": "",
+  "authors": [
+    "Daniel Melo <danielmelogpi@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/danielmelogpi/danmelo.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
