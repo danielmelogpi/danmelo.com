@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/components/normalize-css/normalize.css' />
-    <link rel='stylesheet' href='/css/default.css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    
-    
-    <nav class="main">
-      <ul>
-        <li>lang</li>
-        <li>Contato</li>
-        <li>Sobre</li>
-      </ul>
-    </nav>
-    <section class="banner">
-      <div class="img-container"></div>
-    </section>
-    <section class="main">
-        {{{body}}}
-    </section>
-    
 
-  </body>
-  <script src="/components/vue/dist/vue.min.js"></script>
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/components/normalize-css/normalize.css' />
+  <link rel='stylesheet' href='/css/default.css' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Melo, Daniel" />
+  <meta http-equiv="cache-control"   content="no-cache" />
+  <meta http-equiv="content-language" content="pt-br, en-US" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="copyright" content="© 2017 Daniel Melo" />
+  <meta name="description" content="{{meta.description}}" />
+  <meta name="keywords" content="Daniel Melo desenvolvedor web Goiânia pc sistemas totvs feelancer" />
+  <meta name="robots" content="index, follow">
+  <meta name="rating" content="general" />
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:url" content="http://danmelo.com">
+  
+  <meta name="twitter:url" content="http://danmelo.com">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{meta.description}}">
+  
+  <meta property="og:description" content="{{meta.description}}">
+  <meta name="description" content="{{meta.description}}">
+  <meta name="theme-color" content="#e90041" />
+  
+</head>
+
+<body>
+  <nav class="main">
+    <ul>
+      <!--li><a href="/#pt-BR">&nbsp;</a></li-->
+      <li><a href="/contato">Contato</a></li>
+      <li><a href="/wiki">Wiki</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </nav>
+  <section class="banner">
+    <div class="img-container"></div>
+  </section>
+  <section class="main">
+    {{{body}}}
+  </section>
+</body>
+<footer class="main">
+  <ul>
+    <li><a href="https://br.linkedin.com/in/danielmelodev" target="_blank">LinkedIn</a></li>
+    <li><a href="https://github.com/danielmelogpi" target="_blank">Github</a></li>
+    <li><a href="https://gitlab.com/danielmelogpi" target="_blank">Gitlab</a></li>
+  </ul>
+</footer>
+
 </html>
