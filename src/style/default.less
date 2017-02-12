@@ -1,20 +1,54 @@
 @primary-color: #1f0026;
 @nav-height: 3em;
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+//@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
 * {
     box-sizing: border-box;
 }
 
+@serif-font:'Cambria', serif;
+@sans-serif-font: 'Quicksand', sans-serif;
+@content-font: 'Open Sans', sans-serif;
 
+body {
+    background: rgba(31, 0, 38, 0.05);
+    font-family: @content-font;
+    font-weight: 300;
+}
+
+p {
+    margin-top: 0.2em;
+}
+
+h1,h2,h3,h4 {
+   font-family: @sans-serif-font;
+}
+
+.menu-link-font {
+    @default-color: #fff;
+    @highlight-color: #c5003e;
+
+    color: @default-color;
+    text-decoration: none;
+    font-family: @sans-serif-font;
+    font-weight: bold;
+    &:visited {
+        color: @default-color;
+    }
+    &:active {
+        color: @highlight-color
+    }
+}
 
 nav.main, footer.main {
     padding: 1em 0em 1em 0em;
     height: @nav-height;
     display: block;
     background: @primary-color;
-    color: #fff;
-    font-weight: bold;
-
+    
     ul {
         padding: 0;
         margin: 0;
@@ -25,8 +59,7 @@ nav.main, footer.main {
             width: calc(5em);
             text-align: center;
             a {
-                color: #fff;
-                text-decoration: none;
+                .menu-link-font();
             }
         }
     }
@@ -47,11 +80,47 @@ section.banner {
 @content-lat-padding: 1em;
 
 section.main {
-   padding: 1em @content-lat-padding 1em @content-lat-padding;
+    padding: 1em @content-lat-padding 1em @content-lat-padding;
+    width: ~'calc(100% - 1em)';
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+
+    article {
+        text-align: justify;
+    }
+
 }
 
-article.hello-iam {
+section.main article.hello-iam {
     text-align: center;
+    font-weight: bold;
+    
+    .extra, .what-iam {
+        font-size: 1em;
+    }
+
+    .name {
+        font-size: 1.5em;
+        margin: 0.3em;
+    }
+
+    .what-iam {
+        margin: 0.3em;
+    }
+
+    .photo {
+        background: url('/img/photo-small.jpg') center center no-repeat;
+        height: 7em;
+        width: 7em;
+        background-size: auto 100%;
+        border-radius: 10em;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 footer.main {
@@ -62,5 +131,4 @@ footer.main {
             float: left;
         }
     }
-
 }
