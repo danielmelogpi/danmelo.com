@@ -19,9 +19,7 @@ body {
     font-weight: 300;
 }
 
-p {
-    margin-top: 0.2em;
-}
+
 
 h1,h2,h3,h4 {
    font-family: @sans-serif-font;
@@ -94,6 +92,15 @@ section.main {
         text-align: justify;
     }
 
+    li {
+       line-height: 1.2em;
+    }
+
+    p {
+        margin-top: 0.2em;
+        line-height: 1.2em;
+    }
+
 }
 
 section.main article.hello-iam {
@@ -128,11 +135,23 @@ section.main article.hello-iam {
 }
 
 footer.main {
+    height: @nav-height + 1em;
+
     ul {
         li {
-            width: calc(33% - 1em);
+            width: ~'calc(33%)';
             text-align: center;
             float: left;
         }
+    }
+
+    .copyright {
+        display: block;
+        width: 100%;
+        font-size: small;
+        color: #fff;
+        text-align: center;
+        float: left;
+        margin-top: 1em;
     }
 }
