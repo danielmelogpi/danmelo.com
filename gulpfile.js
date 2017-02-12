@@ -23,4 +23,10 @@ gulp.task('css-package', ['clean:css'], function(){
 });
 
 gulp.task('default', [ 'css-compile' ]);
-gulp.task('production', [ 'css-package' ])
+gulp.task('production', [ 'css-package' ]);
+
+
+// configure which files to watch and what tasks to use on file changes
+gulp.task('watch', function() {
+  gulp.watch(['src/**/*'], ['default'] )
+});
